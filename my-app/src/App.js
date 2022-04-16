@@ -1,4 +1,5 @@
 import './App.css';
+import Suggestions from './components/suggestions/suggestions.js';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
 
       </div>
       <div id="right">
-
+        <Suggestions />
       </div>
     </div>
   );
