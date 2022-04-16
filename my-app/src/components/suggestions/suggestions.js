@@ -26,7 +26,7 @@ export default function Suggestions() {
   //const url = `https://api.openweathermap.org/data/2.5/weather`
   const [data,setData] = useState({})
   const [location, setLocation] = useState("")
-  const [image,setImage] = useState('../../..//public/logo512.png')
+  const [image,setImage] = useState('../../../public/dots.png')
 
   const apikey = '298c9ea6dc6adb4d367666ac31bdb12f'
 
@@ -65,10 +65,9 @@ export default function Suggestions() {
               <img src= {image} alt=""/>
             </div>
             <div className="temp">
-              {data.main ? <h1>{((data.main.temp-273) * (9/5) + 32).toFixed(2)}°F</h1> : null}
+              {data.main ? <h2>{((data.main.temp-273) * (9/5) + 32).toFixed(2)}°F</h2> : null}
             </div>
           </div>
-          
           <div className="description">
             {data.weather ? <p>{data.weather[0].description}</p> : null}
           </div>
