@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ChecklistItem from './ChecklistItem';
+import './Checklist.css';
 
 function Checklist(props){
   const[list,setList] = useState([]);
