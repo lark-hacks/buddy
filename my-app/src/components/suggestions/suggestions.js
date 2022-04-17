@@ -20,6 +20,7 @@
 
 import React, {useState} from 'react'
 import axios from 'axios'
+import {randomInt} from 'mathjs'
 import './suggestions.css'
 
 export default function Suggestions() {
@@ -34,15 +35,33 @@ export default function Suggestions() {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikey}`
   //const iconURL = `http://openweathermap.org/img/wn/10d@2x.png`
 
+  const recsList = {
+    1: "It's a nice day outside. You should go on a hike or enjoy the sunset later!",
+    2: "Grab a couple friends and hit the slopes or have a snowball fight!",
+    3: "Maybe you can try breaking open a book today!",
+    4: "It may be fun to break out a puzzle",
+    5: "It might be a great day to binge your favorite Netflix show"
+  }
+
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
       axios.get(url).then((response) => {
         setData(response.data)
         setImage(`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
         console.log(response.data)
-        if (response.data.weather[0].id === 800) {
-          setRec("It's a nice day outside. You should go on a hike!")
+        let id = response.data.weather[0].id
+        let temp = ((response.data.main.feels_like-273) * (9/5) + 32).toFixed(2)
+        if ((id === 800 || id === 801) && temp >= 50) {
+          setRec(recsList[1])
         }
+        else if (response.data.weather[0].id >= 600 && response.data.weather[0].id <= 631) {
+          setRec(recsList[2])
+        }
+        else {
+          let num = randomInt(3,5)
+          setRec(recsList[num])
+        }
+        
       })
       setLocation('')
       
