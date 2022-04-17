@@ -11,3 +11,9 @@ input[type="radio"] {
     display: flex;
     flex-direction: row;
 }
+
+.animal-wrapper {
+    display: flex;
+    width: 300px;
+    text-align: center;
+}
