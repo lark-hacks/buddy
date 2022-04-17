@@ -27,8 +27,7 @@ class Animal extends Component {
 
     render() {
         return (
-            
-            <div>
+            <div className="animal-wrapper">
                 <img src={this.state.map["cat"]} alt="Buddy"></img>
             </div>
         );
