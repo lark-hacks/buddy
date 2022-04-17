@@ -1,4 +1,3 @@
-
 :root {
   --width: 300px;
 }
@@ -14,7 +13,7 @@
   left: 0;
   top: 0;
   transition: 0.4s;
-  background: red;
+  background: #699A78;
   z-index: 9999;
   transform: translateX(-100%);
 }
@@ -30,7 +29,7 @@
   left: 0;
   top: 0;
   overflow: hidden;
-  background-color: red;
+  background-color: #699A78;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -41,7 +40,8 @@
   height: 2px;
   left: 10%;
   top: 48%;
-  background: yellow;
+  background: whitesmoke;
+  border-color: whitesmoke;
   transition: 0.4s;
 }
 

@@ -10,7 +10,7 @@ function ChecklistItem(props){
     <div id="item">
       <label>
       <input value={checked} type="checkbox" />
-        <span class="checkbox">  
+        <span className="checkbox">  
         </span>
       </label>
       {value}
