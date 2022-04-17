@@ -3,7 +3,7 @@ import ChecklistItem from './ChecklistItem.js';
 import './Checklist.css';
 
 function Checklist(props){ 
-  const[list,setList] = useState([]);
+  const[list,setList] = useState(["Read a book","Walk around occum"]);
   const[value,setValue] = useState("");
 
   const removeItem = (index) => {
