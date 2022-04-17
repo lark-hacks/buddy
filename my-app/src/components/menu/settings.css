@@ -1,7 +1,7 @@
-.menu{
+.settings{
     width: 300px;
     height: 100vh;
-    background-color: white;
+    background-color: #A3BFAC;
     position: fixed;
     top: 0;
     right: -300px;
@@ -11,30 +11,32 @@
     align-items: center;
     justify-content: center;
     transition: all 1s ease;
+}
 
+.settings:active{
+    right: 10;
 }
-/* when clicked, becomes active */
-:active{
-    right: 0;
-}
+
 ul{
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 30px;
     font-weight: 400;
-    color: whitesmoke;
+    color: white;
     width: 60%;
 }
+
 li{
     margin-bottom: 25px;
 }
+
 a {
-    font-size: inherit;
+    font-size: 1rem;
     color: inherit;
     text-decoration: none;
 }
 
-:hover {
+.settings:hover {
     font-weight: 500;
 }

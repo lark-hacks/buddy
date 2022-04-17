@@ -1,13 +1,12 @@
 import React from 'react'
-import "./menu.css"
+import "./settings.css"
 
-export default function Menu({ menuOpen, setMenuOpen }) {
+export default function Settings({ menuOpen, setMenuOpen }) {
     return (
         <div className={"menu " + (menuOpen && "active") }>
             <ul>
                 <li onClick={() =>setMenuOpen(false)}>
-                    <a>Pick an animal</a>
-                    
+                    Home
                 </li>
             </ul>
         </div>

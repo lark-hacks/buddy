@@ -1,0 +1,47 @@
+.menubar{
+    width: 10%;
+    height: 50px;
+    background-color: #A3BFAC;
+    color: whitesmoke;
+    display: flex;
+    top: 0;
+    z-index: 10;
+    transition: all 1s ease;
+}
+
+.hamburger{
+    width: 32px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.menubar:active{
+    background-color: #A3BFAC;
+    color: whitesmoke;
+}
+
+span{
+    width: 10%;
+    height: 3px;
+    background-color: whitesmoke;
+    transform-origin: left;
+    transition: all 2s ease;
+
+}
+
+span:first-child{
+    background-color: whitesmoke;
+    transform: rotate(45deg);
+    left: 10px;
+}
+span:nth-child(2) {
+    opacity: 0;
+    left: 10px;
+}
+span:last-child{
+    background-color: whitesmoke;
+    transform: rotate(-45deg);
+    left: 10px;
+}
