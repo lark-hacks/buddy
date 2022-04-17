@@ -8,8 +8,8 @@ import Time from './components/Time.js'
 import Checklist from './components/checklist/Checklist.js'
 import Suggestions from './components/suggestions/Suggestions.js';
 import Menu from './components/Menu.js';
-import app from './firestore';
-import { Auth } from './firestore/Auth';
+// import app from './firestore';
+// import { Auth } from './firestore/Auth';
 
 function App() {
   const [value, setValue] = useState("cat");
@@ -26,7 +26,7 @@ function App() {
         </div>
         
         <div className='animal-container'>
-          <Animal animalType={'cat'}/>
+          <Animal animalType={'cat'} animalName={'Buddy'}/>
         </div>
           {/* <ChooseBuddy setValue = {setValue}/>
           <Animal animalType = {value}/> */}

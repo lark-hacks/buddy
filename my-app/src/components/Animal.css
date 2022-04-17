@@ -1,11 +1,9 @@
-
 input[type="radio"] {
     display: none;
 }
 
 .animal-head {
     margin: 20px;
-    
 }
 
 .animal-button {
@@ -17,4 +15,30 @@ input[type="radio"] {
     display: flex;
     width: 300px;
     text-align: center;
+}
+
+.animal-name {
+    display: flex;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.animal-image-wrapper {
+    display: flex;
+}
+
+#animal-image {
+    transform: translate(15px);
+
+}
+
+#shadow {
+    position: absolute;
+    z-index: -1;
+    bottom: 90px;
+    transform: translate(-13px);
 }

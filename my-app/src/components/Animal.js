@@ -6,6 +6,7 @@ import pandaPhoto from "../img/panda.svg"
 import catHeadPhoto from "../img/cat-head.svg"
 import dogHeadPhoto from "../img/dog-head.svg"
 import pandaHeadPhoto from "../img/panda-head.svg"
+import shadow from "../img/cat-shadow.svg"
 
 class Animal extends Component {
     constructor(props) {
@@ -17,7 +18,8 @@ class Animal extends Component {
                 cat : catPhoto,
                 panda : pandaPhoto,
             }, 
-            animal : props.animalType
+            animal : props.animalType,
+            animalName: props.animalName
         }
 
         this.onChangeValue = this.onChangeValue.bind(this);
@@ -51,8 +53,12 @@ class Animal extends Component {
                         </label>
                     </div>  */}
                 </div>
-                <div>
-                    <img src={this.state.map[this.state.animal]} alt="Buddy"></img>
+                <div className='animal-image-wrapper'>
+                    <img id="animal-image" src={this.state.map[this.state.animal]} alt="Buddy"></img>
+                    <img id="shadow" src={shadow} alt="shadow" />
+                </div>
+                <div className='animal-name'>
+                    {this.state.animalName}
                 </div>
             </div>
         );
