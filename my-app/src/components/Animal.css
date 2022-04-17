@@ -15,4 +15,5 @@ input[type="radio"] {
 .animal-wrapper {
     display: flex;
     width: 300px;
+    text-align: center;
 }

@@ -18,11 +18,13 @@ function App() {
           <Checklist />
       </div>
       <div id="middle">
+        <div className="time">
+          <Time />
+        </div>
         <div className='animal-container'>
           <Animal animalType={'cat'}/>
         </div>
         {/* <ChooseBuddy setValue = {setValue}/> */}
-        <Time />
         {/* <Animal animalType = {value}/> */}
       </div>
       <div id="right">
