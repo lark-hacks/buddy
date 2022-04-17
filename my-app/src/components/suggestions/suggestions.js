@@ -61,12 +61,11 @@ export default function Suggestions() {
           let num = randomInt(3,5)
           setRec(recsList[num])
         }
-        
       })
       setLocation('')
-      
     }
   }
+  
 
   return(
     <div className="suggestions">
