@@ -13,7 +13,7 @@
   left: 0;
   top: 0;
   transition: 0.4s;
-  background: #7ea188;
+  background: #87a390;
   z-index: 9999;
   transform: translateX(-100%);
 }
@@ -36,7 +36,7 @@ input[type="radio"] {
 
 .animal-button {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .animal-wrapper {
