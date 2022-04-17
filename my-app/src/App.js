@@ -14,25 +14,27 @@ function App() {
   const [value, setValue] = useState("cat");
 
   return (
-    <div className="main">
+    <Router>
+      <div className="main">
 
-      <div id="left">
-          <Checklist />
-      </div>
-      <div id="middle">
-        <div className="time">
-          <Time />
+        <div id="left">
+            <Checklist />
         </div>
-        <div className='animal-container'>
-          <Animal animalType={'cat'}/>
+        <div id="middle">
+          <div className="time">
+            <Time />
+          </div>
+          <div className='animal-container'>
+            <Animal animalType={'cat'}/>
+          </div>
+          {/* <ChooseBuddy setValue = {setValue}/> */}
+          {/* <Animal animalType = {value}/> */}
         </div>
-        {/* <ChooseBuddy setValue = {setValue}/> */}
-        {/* <Animal animalType = {value}/> */}
+        <div id="right">
+          <Suggestions />
+        </div>
       </div>
-      <div id="right">
-        <Suggestions />
-      </div>
-    </div>
+    </Router>
   );
 }
 
