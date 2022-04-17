@@ -8,6 +8,8 @@ import Time from './components/Time.js'
 import Checklist from './components/checklist/Checklist.js'
 import Suggestions from './components/suggestions/Suggestions.js';
 import Menu from './components/Menu.js';
+import app from './firestore';
+import { Auth } from './firestore/Auth';
 
 function App() {
   const [value, setValue] = useState("cat");
