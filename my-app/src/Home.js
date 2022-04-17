@@ -13,10 +13,6 @@ function Home() {
   const [isOpen,setOpen] = useState(true);
   const [name, setName] = useState('');
 
-  const childToParent = (name) => {
-    setName(name);
-  }
-
   return (
     <div className="main">
       <SlidingMenu isOpen={isOpen} onChange={setOpen} />
