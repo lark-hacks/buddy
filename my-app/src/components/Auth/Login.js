@@ -3,6 +3,7 @@ import { useNavigate, Navigate } from "react-router";
 import app from "../../firebase/index.js";
 import { AuthContext } from "./Auth.js";
 import './auth.css';
+import logo from '../../img/logo.svg';
 
 const Login = () => {
 
@@ -30,7 +31,11 @@ const Login = () => {
   }
 
   return (
-    <div className="login">
+    <div className="login container">
+      <div className="logo-container">
+        <img id="logo" src={logo} alt="logo"/>
+        <div className="logo-title">WellBuddies</div>
+      </div>
       <h1>Login</h1>
       <form onSubmit={handleLogin}>
         <label>
@@ -43,7 +48,7 @@ const Login = () => {
         </label>
         <button type="submit">Log in</button>
       </form>
-      <button onClick={()=>{navigate("/Signup");}}>Click Here to Sign Up</button>
+      <button className="secondary" onClick={()=>{navigate("/Signup");}}>Sign Up</button>
     </div>
   );
 };

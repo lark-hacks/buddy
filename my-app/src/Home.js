@@ -21,7 +21,7 @@ function Home() {
             <Time />
           </div>
           <div className='animal-container'>
-            <Animal animalType={'cat'}/>
+            <Animal animalType={'cat'} animalName="Buddy"/>
           </div>
           {/* <ChooseBuddy setValue = {setValue}/> */}
           {/* <Animal animalType = {value}/> */}

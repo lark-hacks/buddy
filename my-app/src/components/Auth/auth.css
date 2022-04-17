@@ -1,8 +1,8 @@
 .login div {
   text-align:center;
-  flex-flow: column nowrap;
   display:flex;
   align-items: center;
+  color: #144936;
 }
 
 .login div form{
@@ -15,12 +15,64 @@
   margin: 10px;
 }
 
-.login div form label input{
+div form label input{
   margin: 10px;
 }
 
 
-.login div form button {
+div form button {
   align-self: center;
   margin:30px;
 }
+
+button {
+  color: white;
+  font-family: 'Rubik';
+  font-size: 20px;
+}
+
+button[type="submit"] {
+  background-color: #699A78;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+.container {
+  color: #144936;
+  display: flex;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+}
+
+.logo-container label {
+  font-size: 2em;
+}
+
+.logo-title {
+  font-size: 40px;
+  padding: 20px;
+}
+
+#logo {
+  width: 80px;
+}
+
