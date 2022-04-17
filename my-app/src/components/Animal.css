@@ -1,0 +1,20 @@
+
+input[type="radio"] {
+    display: none;
+}
+
+.animal-head {
+    margin: 20px;
+    
+}
+
+.animal-button {
+    display: flex;
+    flex-direction: row;
+}
+
+.animal-wrapper {
+    display: flex;
+    width: 300px;
+    text-align: center;
+}
