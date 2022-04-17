@@ -35,6 +35,6 @@ a {
     text-decoration: none;
 }
 
-:hover {
+menu:hover {
     font-weight: 500;
 }
