@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import styles from "./slidingmenubar.css";
+import styles from "./SlidingMenu.module.css";
 
 const SlidingMenu = props => {
   const { isOpen, children, onChange } = props;
 
   const onClickHandler = () => {
     onChange(!isOpen);
+    console.log(isOpen);
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className="wrapper">
       {/* Hamburger icon */}
       <div
         onClick={onClickHandler}
@@ -25,6 +26,7 @@ const SlidingMenu = props => {
       {/* sliding menu */}
       <div className={cx(styles.menu, { [styles.active]: !isOpen })}>
         {children}
+        
       </div>
     </div>
   );
