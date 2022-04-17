@@ -4,11 +4,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -43,8 +38,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 60px;
-  /* margin: 10px 60px; */
+  padding: 50px;
 }
 
 
@@ -61,7 +55,7 @@ body, input {
   color: white;
   font-weight: 300;
   text-align: center;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .clock {

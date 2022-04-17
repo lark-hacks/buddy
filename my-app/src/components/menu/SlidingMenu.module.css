@@ -1,10 +1,11 @@
 :root {
-  --width: 650px;
+  --width: 300px;
 }
 
 .wrapper {
   position: relative;
 }
+
 
 .menu {
   position: fixed;
@@ -13,9 +14,14 @@
   left: 0;
   top: 0;
   transition: 0.4s;
-  background: #87a390;
+  background: #699A78;
   z-index: 9999;
   transform: translateX(-100%);
+}
+
+.menu p, h2 {
+  padding: 20px 20px 0;
+  color: white;
 }
 
 .menu.active {
@@ -74,6 +80,7 @@ input[type="radio"] {
   background-color: transparent;
   cursor: pointer;
   transition: 0.4s;
+  margin: 10px;
 }
 
 .hamburger > span {

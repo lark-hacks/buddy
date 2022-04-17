@@ -14,6 +14,11 @@ const SlidingMenu = props => {
     console.log(isOpen);
   };
 
+  const onChangeValue = (e) => {
+    console.log(e.target.value);
+    this.setState({animal:e.target.value});
+  }
+
   return (
     <div className="wrapper">
       {/* Hamburger icon */}
@@ -29,25 +34,11 @@ const SlidingMenu = props => {
       {/* sliding menu */}
       <div className={cx(styles.menu, { [styles.active]: !isOpen })}>
         {children}
-        <div className='animal-button'> 
-            <div className='animal-head'>
-                <label>
-                    <img src = {catHeadPhoto} alt = "cat head" />
-                    <input type="radio" name="avatar" value="cat" onChange={(e)=>{this.onChangeValue(e);}}/>
-                </label>
-            </div>   
-            <div className='animal-head'>
-                <label>
-                    <img src = {dogHeadPhoto} alt = "dog head" />
-                    <input type="radio" name="avatar" value="dog" onChange={(e)=>{this.onChangeValue(e);}}/>
-                </label>  
-            </div>
-            <div className='animal-head'>
-                <label>
-                    <img src = {pandaHeadPhoto} alt = "panda head" />
-                    <input type="radio" name="avatar" value="panda" onChange={(e)=>{this.onChangeValue(e);}}/>
-                </label>
-            </div> 
+        <div id="menu-inner">
+          <h2>About WellBuddies</h2>
+          <p>WellBuddies was created for students to prioritize their own wellbeing. By listening to your buddy's suggestions and taking care of them, you take care of yourself.</p>
+          <p>Choose between a cat, corgi dog, or a panda for your buddy. Enter in your location, and your buddy will suggest wellness activities to do based on your weather. WellBuddies suggests wellness activities for you to do, and you can check them off or add your own.</p>
+          <p>Created by Elizabeth Frey, Kevin King, Russell Chai, and Annie Qiu for HackDartmouth VII. We made this website with React, HTML/CSS/Javascript, Firebase, and APIs.</p>
         </div>
       </div>
     </div>

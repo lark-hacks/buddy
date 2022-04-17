@@ -6,9 +6,19 @@ input[type="radio"] {
     margin: 20px;
 }
 
+.animal-head img {
+    height: 100px;
+    transition: all 0.3s ease;
+}
+
+.animal-head img:hover {
+    transform: scale(110%);
+}
+
 .animal-button {
     display: flex;
     flex-direction: row;
+    margin: 20px;
 }
 
 .animal-wrapper {
@@ -40,5 +50,16 @@ input[type="radio"] {
     position: absolute;
     z-index: -1;
     bottom: 90px;
-    transform: translate(-13px);
+    transform: translate(-13px, -70px);
+}
+
+.home-animal-button {
+    display: flex;
+    flex-direction: row;
+    transform: translate(-30px);
+
+}
+
+.home-animal-button .animal-head img {
+    width: 60px;
 }
