@@ -6,14 +6,18 @@ import React, {useState} from "react";
 import Time from './components/Time.js'
 import Checklist from './components/checklist/Checklist.js'
 import Suggestions from './components/suggestions/Suggestions.js';
+import SlidingMenu from './components/menu/SlidingMenu.js';
 
 function Home() {
   const [value, setValue] = useState("cat");
+  const [isOpen,setOpen] = useState(true);
+
+
 
   return (
-      <div className="main">
+    <div className="main">
+      <SlidingMenu isOpen={isOpen} onChange={setOpen}/>
         <div id="left">
-
             <Checklist />
         </div>
         <div id="middle">
@@ -29,7 +33,7 @@ function Home() {
         <div id="right">
           <Suggestions />
         </div>
-      </div>
+    </div>
   );
 }
 
