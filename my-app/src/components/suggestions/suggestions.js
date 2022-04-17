@@ -22,6 +22,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import {randomInt} from 'mathjs'
 import './suggestions.css'
+import Recommendation from './Recommendation.js'
 
 export default function Suggestions() {
   //const url = `https://api.openweathermap.org/data/2.5/weather`
@@ -39,8 +40,8 @@ export default function Suggestions() {
     1: "It's a nice day outside. You should go on a hike or enjoy the sunset later!",
     2: "Grab a couple friends and hit the slopes or have a snowball fight!",
     3: "Maybe you can try breaking open a book today!",
-    4: "It may be fun to break out a puzzle",
-    5: "It might be a great day to binge your favorite Netflix show"
+    4: "It may be fun to break out a puzzle!",
+    5: "It might be a great day to binge your favorite Netflix show!"
   }
 
   const searchLocation = (event) => {
@@ -65,9 +66,15 @@ export default function Suggestions() {
       setLocation('')
     }
   }
+
+  const passRec = () => {
+    this.props.recallRec(rec);
+  }
   
 
   return(
+    <div>
+
     <div className="suggestions">
       <div className="search">
         <input 
@@ -92,10 +99,12 @@ export default function Suggestions() {
           <div className="description">
             {data.weather ? <p>{data.weather[0].description}</p> : null}
           </div>
-          <div className="recommendation">
+          {/* <div className="recommendation">
             <p>{rec}</p>
-          </div>
+          </div> */}
       </div>
+    </div>
+      <Recommendation rec={rec} weather={'cloudy'}/>
     </div>
   );
 }
