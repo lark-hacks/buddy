@@ -61,12 +61,11 @@ export default function Suggestions() {
           let num = randomInt(3,5)
           setRec(recsList[num])
         }
-        
       })
       setLocation('')
-      
     }
   }
+  
 
   return(
     <div className="suggestions">
@@ -75,7 +74,7 @@ export default function Suggestions() {
           value={location}
           onChange={event => setLocation(event.target.value)}
           onKeyPress={searchLocation}
-          placeholder='Enter Location'
+          placeholder='Search Location &#128270;'
           type="text"/>
       </div>
       <div className="container">

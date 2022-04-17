@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import emptyweather from "../../img/emptyweather.svg"
 
 export default function EmptyWeather() {
+
     return (
         <div id="empty-weather">
         <img src={emptyweather} alt="empty weather"/>

@@ -9,6 +9,7 @@ function Checklist(props){
   const removeItem = (index) => {
     setList([...value.slice(0,index), ...value.slice(index+1)]);
   }
+  
 
   const _handleKeyDown = (e) => {
     if (e.key === 'Enter') {
