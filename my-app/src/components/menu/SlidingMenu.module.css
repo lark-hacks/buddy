@@ -1,5 +1,5 @@
 :root {
-  --width: 300px;
+  --width: 650px;
 }
 
 .wrapper {
@@ -13,13 +13,55 @@
   left: 0;
   top: 0;
   transition: 0.4s;
-  background: #699A78;
+  background: #7ea188;
   z-index: 9999;
   transform: translateX(-100%);
 }
 
 .menu.active {
   transform: translateX(0);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.animal-head {
+  margin: 10px;
+}
+
+.animal-head:img {
+  height: 40px;
+}
+
+.animal-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.animal-wrapper {
+  display: flex;
+  width: 300px;
+  text-align: center;
+}
+
+.animal-name {
+  display: flex;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.animal-image-wrapper {
+  display: flex;
+}
+
+#animal-image {
+  transform: translate(15px);
+
 }
 
 .hamburger {
@@ -29,7 +71,7 @@
   left: 0;
   top: 0;
   overflow: hidden;
-  background-color: #699A78;
+  background-color: transparent;
   cursor: pointer;
   transition: 0.4s;
 }
