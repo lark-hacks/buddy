@@ -4,7 +4,7 @@ import Animal from './components/Animal.js';
 import React, {useState} from "react";
 // import ChooseBuddy from './components/ChooseBuddy';
 import Time from './components/Time.js'
-import Checklist from './components/Checklist.js'
+import Checklist from './components/checklist/Checklist.js'
 import Suggestions from './components/suggestions/suggestions.js';
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
   return (
       <div className="main">
         <div id="left">
-            
+
             <Checklist />
         </div>
         <div id="middle">
