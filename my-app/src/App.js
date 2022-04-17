@@ -1,40 +1,26 @@
 
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Animal from './components/Animal.js';
 import React, {useState} from "react";
+import Home from './Home.js';
+import Signup from './components/Auth/Signup.js';
+import Login from './components/Auth/Login.js';
+import PrivateRoute from './components/Auth/PrivateRoute.js';
 // import ChooseBuddy from './components/ChooseBuddy';
-import Time from './components/Time.js'
-import Checklist from './components/Checklist.js'
-import Suggestions from './components/suggestions/suggestions.js';
-import app from './firestore';
-import { Auth } from './firestore/Auth';
+import { AuthProvider } from './components/Auth/Auth.js';
 
 function App() {
-  const [value, setValue] = useState("cat");
 
   return (
-    <Router>
-      <div className="main">
-
-        <div id="left">
-            <Checklist />
+    <AuthProvider>
+      <Router>
+        <div>
+          <PrivateRoute exact path="/" component={Home}/>
+          <Route exact path="/Signup" component={Signup}/>
+          <Route exact path="/Login" component={Login}/>
         </div>
-        <div id="middle">
-          <div className="time">
-            <Time />
-          </div>
-          <div className='animal-container'>
-            <Animal animalType={'cat'}/>
-          </div>
-          {/* <ChooseBuddy setValue = {setValue}/> */}
-          {/* <Animal animalType = {value}/> */}
-        </div>
-        <div id="right">
-          <Suggestions />
-        </div>
-      </div>
-    </Router>
+      </Router>
+    </AuthProvider>
   );
 }
 

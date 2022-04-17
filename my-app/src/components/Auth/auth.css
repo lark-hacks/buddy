@@ -1,0 +1,26 @@
+div {
+  text-align:center;
+  flex-flow: column nowrap;
+  display:flex;
+  align-items: center;
+}
+
+div form{
+  align-items: flex-end;
+  display:flex;
+  flex-direction: column;
+}
+
+div form label{
+  margin: 10px;
+}
+
+div form label input{
+  margin: 10px;
+}
+
+
+div form button {
+  align-self: center;
+  margin:30px;
+}
