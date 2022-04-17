@@ -104,9 +104,7 @@ export default function Suggestions() {
           </div>
       </div>
     </div>
-    <div className='rec-chat'>
       <Recommendation rec={rec}/>
-      </div> 
     </div>
   );
 }

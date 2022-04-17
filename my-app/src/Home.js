@@ -5,7 +5,7 @@ import React, {useState} from "react";
 // import ChooseBuddy from './components/ChooseBuddy';
 import Time from './components/Time.js'
 import Checklist from './components/checklist/Checklist.js'
-import Suggestions from './components/suggestions/suggestions.js';
+import Suggestions from './components/suggestions/Suggestions.js';
 
 function Home() {
   const [value, setValue] = useState("cat");
