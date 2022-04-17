@@ -11,12 +11,11 @@ import SlidingMenu from './components/menu/SlidingMenu.js';
 function Home() {
   const [value, setValue] = useState("cat");
   const [isOpen,setOpen] = useState(true);
-
-
+  const [name, setName] = useState('');
 
   return (
     <div className="main">
-      <SlidingMenu isOpen={isOpen} onChange={setOpen}/>
+      <SlidingMenu isOpen={isOpen} onChange={setOpen} />
         <div id="left">
             <Checklist />
         </div>
@@ -25,7 +24,7 @@ function Home() {
             <Time />
           </div>
           <div className='animal-container'>
-            <Animal animalType={'cat'} animalName="Buddy"/>
+            <Animal animalType={'cat'} animalName='Buddy'/>
           </div>
         </div>
         <div id="right">
