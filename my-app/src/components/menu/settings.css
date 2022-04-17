@@ -37,6 +37,10 @@ a {
     text-decoration: none;
 }
 
+<<<<<<< HEAD:my-app/src/components/menu/settings.css
 .settings:hover {
+=======
+menu:hover {
+>>>>>>> cfb32313aad261da091759b6ab1e125beb01883d:my-app/src/components/menu.css
     font-weight: 500;
 }

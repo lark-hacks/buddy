@@ -1,0 +1,90 @@
+#checklist {
+    background-color: white;
+    width: 250px;
+    padding: 28px 20px 24px 28px;
+    border-radius: 14px;
+}
+
+#item {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.add-habit input {
+    width: 200px;
+    margin: 20px 0 5px;
+}
+
+.checklist-item {
+    padding: 4px 0;
+    font-size: 18px;
+}
+
+.list-container {
+    padding: 10px 0;
+}
+
+span {
+    cursor: pointer;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	border: 1.5px solid black;
+	margin-right: 15px;
+	border-radius: 100%;
+	transition: all .3s;
+}
+
+input:checked + span {
+	background-color: #699A78;
+    border-color: #699A78;
+	/* animation: bounce 250ms; */
+}
+
+input:checked + span::before {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 4px;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	transform: rotate(45deg);
+	transform-origin: 0% 100%;
+	color: #699A78;
+}
+label {
+	display: flex; 
+    align-items: center; 
+	position: relative;
+}
+
+input[type="checkbox"] {
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 8px;
+    color: #B7B7B7;
+}
+
+button:hover ~.checklist-item {
+    color: gray;
+    text-decoration-line: line-through;
+}
+
+input::placeholder {
+    font-size: 16px;
+    color: #4D4D4D;
+    font-weight: 300;
+}

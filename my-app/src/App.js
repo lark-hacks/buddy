@@ -1,41 +1,29 @@
 
 import './App.css';
-//import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Animal from './components/Animal.js';
+import {  BrowserRouter as Router,  Routes,  Route} from "react-router-dom";
 import React, {useState} from "react";
-import Time from './components/Time.js'
-import Checklist from './components/checklist/Checklist.js'
-import Suggestions from './components/suggestions/Suggestions.js';
-import Menubar from './components/menu/Menubar.js'
-import Settings from './components/menu/Settings.js'
-//import app from './firestore';
-//import { Auth } from './firestore/Auth';
+import Home from './Home.js';
+import Signup from './components/Auth/Signup.js';
+import Login from './components/Auth/Login.js';
+import PrivateRoute from './components/Auth/PrivateRoute.js';
+import { Fragment } from 'react';
+// import ChooseBuddy from './components/ChooseBuddy';
+import { AuthProvider } from './components/Auth/Auth.js';
 
 function App() {
-  const [value, setValue] = useState("cat");
-  const [menuOpen, setMenuOpen] = useState(false);
-  
+
   return (
-    <div className="main">
-      <Settings menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <Menubar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <div id="left">
-          <Checklist />
-      </div>
-      <div id="middle">
-        <div className="time">
-          <Time />
-        </div>
-        <div className='animal-container'>
-          <Animal animalType={'cat'}/>
-        </div>
-          <Animal animalType = {value}/>
-      </div>
-      <div id="right">
-        <Suggestions />
-      </div>
-      
-    </div>
+    <AuthProvider>
+      <Router>
+        <Fragment>
+          <Routes>
+          <Route exact path='/' element={<PrivateRoute/>}/>
+          <Route path="/Signup" element={<Signup/>}/>
+          <Route path="/Login" element={<Login/>}/>
+        </Routes>
+        </Fragment>  
+        </Router>
+    </AuthProvider>
   );
 }
 
