@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ChecklistItem from './ChecklistItem';
+import ChecklistItem from './ChecklistItem.js';
 import './Checklist.css';
 
 function Checklist(props){
