@@ -27,6 +27,7 @@ export default function Suggestions() {
   const [data,setData] = useState({})
   const [location, setLocation] = useState("")
   const [image,setImage] = useState('../../../public/dots.png')
+  const [rec, setRec] = useState("")
 
   const apikey = '298c9ea6dc6adb4d367666ac31bdb12f'
 
@@ -34,14 +35,17 @@ export default function Suggestions() {
   //const iconURL = `http://openweathermap.org/img/wn/10d@2x.png`
 
   const searchLocation = (event) => {
-
     if (event.key === 'Enter') {
       axios.get(url).then((response) => {
         setData(response.data)
         setImage(`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
         console.log(response.data)
+        if (response.data.weather[0].id === 800) {
+          setRec("It's a nice day outside. You should go on a hike!")
+        }
       })
       setLocation('')
+      
     }
   }
 
@@ -72,7 +76,7 @@ export default function Suggestions() {
             {data.weather ? <p>{data.weather[0].description}</p> : null}
           </div>
           <div className="recommendation">
-            <p></p>
+            <p>{rec}</p>
           </div>
       </div>
     </div>

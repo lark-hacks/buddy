@@ -1,11 +1,9 @@
-
-import React from 'react';
 import './App.css';
 import React, {useState} from "react";
 import Animal from './components/Animal.js'
-import ChooseBuddy from './components/ChooseBuddy';
+//import ChooseBuddy from './components/ChooseBuddy';
 import Time from './components/Time.js'
-import Checklist from './components/Checklist'
+import Checklist from './components/Checklist.js'
 import Suggestions from './components/suggestions/suggestions.js';
 
 function App() {
@@ -17,7 +15,7 @@ function App() {
           <Checklist />
       </div>
       <div id="middle">
-        <ChooseBuddy setValue = {setValue}/>
+        {/* <ChooseBuddy setValue = {setValue}/> */}
         <Time />
         <Animal animalType = {value}/>
       </div>
