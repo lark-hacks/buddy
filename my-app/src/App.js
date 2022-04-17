@@ -1,14 +1,15 @@
 
 import './App.css';
-import React, { useState } from 'react';
-import Login from './components/Login/Login';
-import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Animal from './components/Animal';
-import Checklist from './components/Checklist'
+import Animal from './components/Animal.js';
+import React, {useState} from "react";
+// import ChooseBuddy from './components/ChooseBuddy';
+import Time from './components/Time.js'
+import Checklist from './components/Checklist.js'
 import Suggestions from './components/suggestions/suggestions.js';
 
 function App() {
+  const [value, setValue] = useState("cat");
 
   return (
     <div className="main">
@@ -18,6 +19,9 @@ function App() {
       </div>
       <div id="middle">
           <Animal animalType={'cat'}/>
+        {/* <ChooseBuddy setValue = {setValue}/> */}
+        <Time />
+        <Animal animalType = {value}/>
       </div>
       <div id="right">
         <Suggestions />

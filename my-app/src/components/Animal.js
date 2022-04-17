@@ -29,7 +29,7 @@ class Animal extends Component {
         return (
             
             <div>
-                <img src={this.state.map[this.state.animal]} alt="Buddy"></img>
+                <img src={this.state.map["cat"]} alt="Buddy"></img>
             </div>
         );
     }
