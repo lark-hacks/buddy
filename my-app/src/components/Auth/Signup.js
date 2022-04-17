@@ -2,6 +2,8 @@ import React, { useCallback } from "react";
 import { useNavigate } from "react-router";
 import app from '../../firebase/index.js'
 import './auth.css';
+import logo from '../../img/logo.svg';
+
 
 const Signup = () => {
 
@@ -19,7 +21,12 @@ const Signup = () => {
   });
 
   return (
-    <div id="signup">
+    <div className="container" id="signup">
+
+    <div className="logo-container">
+        <img id="logo" src={logo} alt="logo"/>
+        <div className="logo-title">WellBuddies</div>
+      </div>
       <h1>Sign up</h1>
       <form onSubmit={handleSignUp}>
         <label>
@@ -32,6 +39,7 @@ const Signup = () => {
         </label>
         <button type="submit">Sign Up</button>
       </form>
+      <button className="secondary" onClick={()=>{navigate("/Login");}}>Log In</button>
     </div>
   );
 };

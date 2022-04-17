@@ -85,7 +85,6 @@ img{
 }
 
 .rec-chat {
-    display: flex;
     padding: 10px 30px;
     width: 200px;
     background-color: white;
@@ -97,5 +96,9 @@ img{
 
 #triangle {
     position: absolute;
-    transform: translate(-125px,-82px);
+    transform: translate(-120px,-70px);
+}
+
+.recommendation-wrapper {
+    transition: 2s all ease;
 }

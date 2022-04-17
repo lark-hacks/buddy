@@ -40,8 +40,8 @@ export default function Suggestions() {
     1: "It's a nice day outside. You should go on a hike or enjoy the sunset later!",
     2: "Grab a couple friends and hit the slopes or have a snowball fight!",
     3: "Maybe you can try breaking open a book today!",
-    4: "It may be fun to break out a puzzle",
-    5: "It might be a great day to binge your favorite Netflix show"
+    4: "It may be fun to break out a puzzle!",
+    5: "It might be a great day to binge your favorite Netflix show!"
   }
 
   const searchLocation = (event) => {
@@ -99,12 +99,12 @@ export default function Suggestions() {
           <div className="description">
             {data.weather ? <p>{data.weather[0].description}</p> : null}
           </div>
-          <div className="recommendation">
+          {/* <div className="recommendation">
             <p>{rec}</p>
-          </div>
+          </div> */}
       </div>
     </div>
-      <Recommendation rec={rec}/>
+      <Recommendation rec={rec} weather={'cloudy'}/>
     </div>
   );
 }
