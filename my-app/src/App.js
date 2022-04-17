@@ -1,11 +1,11 @@
 
-import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Animal from './components/Animal.js';
 import React, {useState} from "react";
-import Animal from './components/Animal.js'
-import ChooseBuddy from './components/ChooseBuddy';
+// import ChooseBuddy from './components/ChooseBuddy';
 import Time from './components/Time.js'
-import Checklist from './components/Checklist'
+import Checklist from './components/Checklist.js'
 import Suggestions from './components/suggestions/suggestions.js';
 
 function App() {
@@ -13,13 +13,19 @@ function App() {
 
   return (
     <div className="main">
+
       <div id="left">
           <Checklist />
       </div>
       <div id="middle">
-        <ChooseBuddy setValue = {setValue}/>
-        <Time />
-        <Animal animalType = {value}/>
+        <div className="time">
+          <Time />
+        </div>
+        <div className='animal-container'>
+          <Animal animalType={'cat'}/>
+        </div>
+        {/* <ChooseBuddy setValue = {setValue}/> */}
+        {/* <Animal animalType = {value}/> */}
       </div>
       <div id="right">
         <Suggestions />
@@ -27,5 +33,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

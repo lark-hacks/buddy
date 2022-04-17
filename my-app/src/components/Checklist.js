@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ChecklistItem from './ChecklistItem';
+import ChecklistItem from './ChecklistItem.js';
 import './Checklist.css';
 
 function Checklist(props){
@@ -23,7 +23,7 @@ function Checklist(props){
       <div className="title">Your CheckList:</div>
       <div className="list-container">
         {list.map((item, index) => (
-         <ChecklistItem checked = {false} value = {item}/>
+         <ChecklistItem checked = {false} value = {item} removeItem = {removeItem} index = {index}/>
         ))}
         <input onChange={(e) => { setValue(e.target.value);}}  onKeyDown={_handleKeyDown} value={value} placeholder="Input New Item Here"/>
     </div>

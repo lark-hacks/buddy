@@ -28,10 +28,10 @@ class Time extends Component {
     render() {
         return (
             <div>
-                <p className="Clock">
+                <p className="clock">
                     {this.state.time}
                 </p>
-                <p className="Calendar">
+                <p className="calendar">
                     {this.state.date}
                 </p>
             </div>
