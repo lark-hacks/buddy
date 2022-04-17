@@ -30,8 +30,6 @@ function Home() {
           <div className='animal-container'>
             <Animal animalType={'cat'} animalName='Buddy'/>
           </div>
-          {/* <ChooseBuddy setValue = {setValue}/> */}
-          {/* <Animal animalType = {value}/> */}
         </div>
         <div id="right">
           <Suggestions />
