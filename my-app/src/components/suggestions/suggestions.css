@@ -60,9 +60,9 @@ img{
     height: 80%; */
 }
 
-.recommendation{
+/* .recommendation{
     font-size: 0.8rem;
-}
+} */
 
 .location p {
     font-weight: 500;
@@ -78,4 +78,27 @@ img{
     font-weight: 300;
     margin: 0;
     font-size: 2em;
+}
+
+.recommendation-wrapper {
+    position: relative;
+}
+
+.rec-chat {
+    padding: 10px 30px;
+    width: 200px;
+    background-color: white;
+    font-size: 18px;
+    border-radius: 40px;
+    margin-top: 30px;
+    transform: translate(-100px);
+}
+
+#triangle {
+    position: absolute;
+    transform: translate(-120px,-70px);
+}
+
+.recommendation-wrapper {
+    transition: 2s all ease;
 }

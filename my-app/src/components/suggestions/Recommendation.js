@@ -1,25 +1,25 @@
 import React, {useState} from 'react'
-import axios from 'axios'
-import {randomInt} from 'mathjs'
 import './suggestions.css'
-import Suggestions from './Suggestions'
+import triangle from '../../img/triangle.svg'
 
-function Recommendation() {
-    const location = props.location;
-    const [rec, setRec] = useState("");
+function Recommendation(props) {
 
-    const recsList = {
-        1: "It's a nice day outside. You should go on a hike or enjoy the sunset later!",
-        2: "Grab a couple friends and hit the slopes or have a snowball fight!",
-        3: "Maybe you can try breaking open a book today!",
-        4: "It may be fun to break out a puzzle",
-        5: "It might be a great day to binge your favorite Netflix show"
-      }
+    if(!props.rec || !props.weather) {
+        return(
+            <div></div>
+        )
+    }
 
     return (
-        <div className="recommendation">
-            <p>{rec}</p>
+        <div className="recommendation-wrapper">
+            <div className='rec-chat'>
+                <p>{props.rec}</p>
+            </div>
+            <div className='arrow-left'>
+                <img id="triangle" src={triangle} alt="triangle" />
+            </div>
         </div>
+        
     )
 }
 
