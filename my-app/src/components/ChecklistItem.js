@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Checklist.css'
 
 function ChecklistItem(props){
 
@@ -7,9 +8,13 @@ function ChecklistItem(props){
 
   return(
     <div id="item">
+      <label>
       <input value={checked} type="checkbox" />
+        <span class="checkbox">  
+        </span>
+      </label>
       {value}
-      <button onClick = {()=>{props.removeItem(props.index);}}>Delete</button>
+      <button onClick = {()=>{props.removeItem(props.index);}}>×</button>
     </div>
   );
 }

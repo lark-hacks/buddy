@@ -21,6 +21,7 @@ function App() {
         <div className="time">
           <Time />
         </div>
+        
         <div className='animal-container'>
           <Animal animalType={'cat'}/>
         </div>

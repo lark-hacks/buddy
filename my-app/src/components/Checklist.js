@@ -20,12 +20,16 @@ function Checklist(props){
 
   return(
     <div id="checklist">
-      <div className="title">Your CheckList:</div>
+      <div className="title">My Wellness</div>
       <div className="list-container">
         {list.map((item, index) => (
-         <ChecklistItem checked = {false} value = {item} removeItem = {removeItem} index = {index}/>
+          <div className='checklist-item'>
+            <ChecklistItem checked = {false} value = {item} removeItem = {removeItem} index = {index}/>
+          </div>
         ))}
-        <input onChange={(e) => { setValue(e.target.value);}}  onKeyDown={_handleKeyDown} value={value} placeholder="Input New Item Here"/>
+        <div className="add-habit">
+          <input onChange={(e) => { setValue(e.target.value);}}  onKeyDown={_handleKeyDown} value={value} placeholder="+ Add new wellness habit"/>
+        </div>
     </div>
     </div>
   );

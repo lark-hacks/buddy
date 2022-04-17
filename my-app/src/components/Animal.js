@@ -32,7 +32,7 @@ class Animal extends Component {
         return (
             <div>
                 <div className='animal-button'> 
-                    <div className='animal-head'>
+                    {/* <div className='animal-head'>
                         <label>
                             <img src = {catHeadPhoto} alt = "cat head" />
                             <input type="radio" name="avatar" value="cat" onChange={(e)=>{this.onChangeValue(e);}}/>
@@ -49,7 +49,7 @@ class Animal extends Component {
                             <img src = {pandaHeadPhoto} alt = "panda head" />
                             <input type="radio" name="avatar" value="panda" onChange={(e)=>{this.onChangeValue(e);}}/>
                         </label>
-                    </div> 
+                    </div>  */}
                 </div>
                 <div>
                     <img src={this.state.map[this.state.animal]} alt="Buddy"></img>

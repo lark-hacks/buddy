@@ -2,10 +2,9 @@
     width: 200px;
     height: auto;
     position: relative;
-    background-color: lightgray;
-    opacity: 70%;
+    background-color: white;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
 :before {
@@ -19,15 +18,15 @@
 }
 .search{
     text-align: center;
-    padding: 3px;
+    /* padding: 3px; */
 }
 
 input{
     padding: 0.7rem 1.2rem;
     font-size: 0.8rem;
-    border-radius: 15px;
-    border: 1px solid black;
-    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    border: none;
+    background: #EDEDED;
     color: black;
     opacity: 100%;
 }
@@ -38,20 +37,21 @@ input{
 
 .container{
     max-width: 150px;
-    height: 150px;
+    /* height: 150px; */
     margin: auto;
-    padding: 0 1rem;
+    padding: 1em 0.4rem;
     position: relative;
     top: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 #temp-icon{
-    width: 80%;
     display:flex;
-    flex: row-reverse;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -64,3 +64,18 @@ img{
     font-size: 0.8rem;
 }
 
+.location p {
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+}
+
+.temp {
+    text-align: center;
+}
+
+.temp h2 {
+    font-weight: 300;
+    margin: 0;
+    font-size: 2em;
+}

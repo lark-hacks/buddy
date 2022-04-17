@@ -8,6 +8,7 @@ function ChecklistItem(props){
   return(
     <div id="item">
       <input value={checked} type="checkbox" />
+      <span class="checkbox"></span>
       {value}
     </div>
   );
