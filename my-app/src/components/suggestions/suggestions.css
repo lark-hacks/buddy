@@ -80,21 +80,22 @@ img{
     font-size: 2em;
 }
 
+.recommendation-wrapper {
+    position: relative;
+}
+
 .rec-chat {
     display: flex;
-    padding: 20px 30px;
+    padding: 10px 30px;
     width: 200px;
     background-color: white;
     font-size: 18px;
-    border-radius: 80px;
+    border-radius: 40px;
     margin-top: 30px;
     transform: translate(-100px);
 }
 
-.arrow-left {
-    width: 0; 
-    height: 0; 
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    border-right:10px solid blue; 
-  }
+#triangle {
+    position: absolute;
+    transform: translate(-125px,-82px);
+}
