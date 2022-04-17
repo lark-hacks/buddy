@@ -19,7 +19,6 @@ class Time extends Component {
         clearInterval(this.intervalID);
     }
     tick() {
-        console.log("ticking");
         const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
         this.setState({
             date : new Date().toLocaleDateString(undefined, options),
