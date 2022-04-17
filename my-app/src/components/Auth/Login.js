@@ -1,10 +1,13 @@
 import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
+import { useNavigate, Navigate } from "react-router";
 import app from "../../firebase/index.js";
 import { AuthContext } from "./Auth.js";
 import './auth.css';
 
-const Login = ({ history }) => {
+const Login = () => {
+
+  let navigate = useNavigate();
+
   const handleLogin = useCallback(
     async event => {
       event.preventDefault();
@@ -13,18 +16,17 @@ const Login = ({ history }) => {
         await app
           .auth()
           .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/");
+        navigate("/");
       } catch (error) {
         alert(error);
       }
     },
-    [history]
   );
 
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to="/" />;
+    return <Navigate to="/" />;
   }
 
   return (
@@ -40,11 +42,10 @@ const Login = ({ history }) => {
           <input name="password" type="password" placeholder="Password" />
         </label>
         <button type="submit">Log in</button>
-        {/* <a onClick={handleClick}>Click here to sign up!</a> */}
       </form>
-      
+      <button onClick={()=>{navigate("/Signup");}}>Click Here to Sign Up</button>
     </div>
   );
 };
 
-export default withRouter(Login);
+export default Login;

@@ -1,19 +1,22 @@
 import React, { useCallback } from "react";
-import { withRouter } from "react-router";
+import { useNavigate } from "react-router";
 import app from '../../firebase/index.js'
 import './auth.css';
 
-const Signup = ({ history }) => {
+const Signup = () => {
+
+  let navigate = useNavigate();
+
   const handleSignUp = useCallback(async event => {
     event.preventDefault();
     const { email, password } = event.target.elements;
     try {
       await app.auth().createUserWithEmailAndPassword(email.value, password.value);
-      history.push("/");
+      navigate("/");
     } catch (error) {
       alert(error);
     }
-  }, [history]);
+  });
 
   return (
     <div id="signup">
@@ -33,4 +36,4 @@ const Signup = ({ history }) => {
   );
 };
 
-export default withRouter(Signup);
+export default Signup;
