@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import styles from "./SlidingMenu.module.css";
 
 const SlidingMenu = props => {
-  const { isOpen, children, onChange } = props;
+  const { isOpen, children, onChange, childToParent } = props;
 
   const onClickHandler = () => {
     onChange(!isOpen);
     console.log(isOpen);
   };
+
+  const [name, setName] = useState('');
+
+  const childToParent = (name) => {
+    setName(name);
+  }
+
+  const editName = (event) => {
+      event.preventDefault(); 
+      const name = event.target[0].value;
+      childToParent(name);
+  }
 
   return (
     <div className="wrapper">
@@ -26,6 +38,10 @@ const SlidingMenu = props => {
       {/* sliding menu */}
       <div className={cx(styles.menu, { [styles.active]: !isOpen })}>
         {children}
+        <form onSubmit={editName}>
+          <input type="text" name="editname" placeholder="Edit buddy's name"></input>
+          <button type="submit">Submit</button>
+        </form>
         
       </div>
     </div>

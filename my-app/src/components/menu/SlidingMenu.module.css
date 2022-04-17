@@ -13,7 +13,8 @@
   left: 0;
   top: 0;
   transition: 0.4s;
-  background: #699A78;
+  background:  #699A78;
+  ;
   z-index: 9999;
   transform: translateX(-100%);
 }
@@ -29,9 +30,10 @@
   left: 0;
   top: 0;
   overflow: hidden;
-  background-color: #699A78;
+  background-color: transparent;
   cursor: pointer;
   transition: 0.4s;
+  margin: 10px;
 }
 
 .hamburger > span {
