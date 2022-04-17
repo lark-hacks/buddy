@@ -1,20 +1,30 @@
-import React, { useState } from 'react';
+import React, { useContext, useState ,useEffect} from 'react';
 import ChecklistItem from './ChecklistItem.js';
+import { AuthContext } from "../Auth/Auth.js";
+import app from "../../firebase/index.js";
+import 'firebase/firestore';
 import './Checklist.css';
 
 function Checklist(props){ 
   const[list,setList] = useState(["Read a book","Walk around occum"]);
   const[value,setValue] = useState("");
+  const docId = props.docId;
+  const { currentUser } = useContext(AuthContext);
 
   const removeItem = (index) => {
     setList([...value.slice(0,index), ...value.slice(index+1)]);
   }
   
-
   const _handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      setList([...list, value]);
+      console.log(currentUser.email);
+      app.firestore().collection('user-data').doc(docId).set({
+        list: [...list, value],
+      }).then(ref =>{
+        setList([...list, value]);
       setValue("");
+      });
+      
     }
   }
 

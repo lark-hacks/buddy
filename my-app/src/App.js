@@ -7,7 +7,6 @@ import Signup from './components/Auth/Signup.js';
 import Login from './components/Auth/Login.js';
 import PrivateRoute from './components/Auth/PrivateRoute.js';
 import { Fragment } from 'react';
-// import ChooseBuddy from './components/ChooseBuddy';
 import { AuthProvider } from './components/Auth/Auth.js';
 
 function App() {

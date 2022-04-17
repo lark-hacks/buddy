@@ -1,20 +1,32 @@
 
 import './App.css';
 import Animal from './components/Animal.js';
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 // import ChooseBuddy from './components/ChooseBuddy';
 import Time from './components/Time.js'
 import Checklist from './components/checklist/Checklist.js'
 import Suggestions from './components/suggestions/suggestions.js';
+import app from './firebase/index.js';
+import { AuthContext } from './components/Auth/Auth.js';
 
 function Home() {
   const [value, setValue] = useState("cat");
+  const [docId,setDocId] = useState("");
+
+  const {currentUser} = useContext(AuthContext);
+
+  app.firestore().collection('user-data').add({
+      user: currentUser.email,
+  }).then(ref =>{
+      setDocId(ref.id);
+      setValue("");
+  });
 
   return (
       <div className="main">
         <div id="left">
 
-            <Checklist />
+            <Checklist docId = {docId}/>
         </div>
         <div id="middle">
           <div className="time">

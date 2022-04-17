@@ -16,6 +16,7 @@ const Login = () => {
         await app
           .auth()
           .signInWithEmailAndPassword(email.value, password.value);
+        await 
         navigate("/");
       } catch (error) {
         alert(error);
