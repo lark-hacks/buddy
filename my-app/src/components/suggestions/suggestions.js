@@ -22,6 +22,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import {randomInt} from 'mathjs'
 import './suggestions.css'
+import Recommendation from './Recommendation.js'
 
 export default function Suggestions() {
   //const url = `https://api.openweathermap.org/data/2.5/weather`
@@ -65,9 +66,15 @@ export default function Suggestions() {
       setLocation('')
     }
   }
+
+  const passRec = () => {
+    this.props.recallRec(rec);
+  }
   
 
   return(
+    <div>
+
     <div className="suggestions">
       <div className="search">
         <input 
@@ -96,6 +103,10 @@ export default function Suggestions() {
             <p>{rec}</p>
           </div>
       </div>
+    </div>
+    <div className='rec-chat'>
+      <Recommendation rec={rec}/>
+      </div> 
     </div>
   );
 }
