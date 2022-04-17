@@ -1,28 +1,14 @@
-/* #suggestions{
-    background-color: white;
-    display: flex;
-    
-}
-
-.weatherBox{
-        width: 300px;
-        height: 300px;
-        background-color: lightgray;
-        padding: 20px;
-        border-radius: 25px;
-    }  */
-
-
 .suggestions{
-    width: 250px;
+    width: 200px;
     height: auto;
     position: relative;
     background-color: lightgray;
+    opacity: 70%;
     padding: 20px;
     border-radius: 25px;
 }
 
-.suggestions:before {
+:before {
     content: ''; 
     position: absolute;
     width: 100%;
@@ -43,6 +29,7 @@ input{
     border: 1px solid black;
     background: rgba(255,255,255,0.1);
     color: black;
+    opacity: 100%;
 }
 
 ::placeholder {
@@ -50,8 +37,8 @@ input{
 }
 
 .container{
-    max-width: 200px;
-    height: 200px;
+    max-width: 150px;
+    height: 150px;
     margin: auto;
     padding: 0 1rem;
     position: relative;
@@ -66,9 +53,10 @@ input{
     flex: row-reverse;
     justify-content: space-between;
 }
-.icon{
-    width: 50%;
-    height: 50%;
+
+img{
+    width: 85%;
+    height: 80%;
 }
 
 
