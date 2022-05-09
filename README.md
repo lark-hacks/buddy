@@ -1,6 +1,6 @@
 # buddy
 
-![Link to video](https://www.youtube.com/watch?v=pEKGeVYGZq8)
+[Link to video](https://www.youtube.com/watch?v=pEKGeVYGZq8)
 
 # Inspiration
 As college students, our group very much understood the urge to put mental health on the back burner. Especially in a high-achieving environment, we know how easy it is to forget about caring for ourselves. Moreover, as Dartmouth students, we also understand all too well how much the weather can impact our mental health. Thus, we decided to address the prioritization of mental health with Well Buddies.
