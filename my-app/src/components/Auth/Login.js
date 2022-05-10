@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from "react";
+import React, { useContext } from "react";
 import { useNavigate, Navigate } from "react-router";
 import app from "../../firebase/index.js";
 import { AuthContext } from "./Auth.js";
@@ -9,7 +9,7 @@ const Login = () => {
 
   let navigate = useNavigate();
 
-  const handleLogin = useCallback(
+  const handleLogin = 
     async event => {
       event.preventDefault();
       const { email, password } = event.target.elements;
@@ -21,8 +21,7 @@ const Login = () => {
       } catch (error) {
         alert(error);
       }
-    },
-  );
+    }
 
   const { currentUser } = useContext(AuthContext);
 
