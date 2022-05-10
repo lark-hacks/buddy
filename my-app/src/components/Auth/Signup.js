@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useNavigate } from "react-router";
 import app from '../../firebase/index.js'
 import './auth.css';
@@ -9,7 +9,7 @@ const Signup = () => {
 
   let navigate = useNavigate();
 
-  const handleSignUp = useCallback(async event => {
+  const handleSignUp = async event => {
     event.preventDefault();
     const { email, password } = event.target.elements;
     try {
@@ -18,7 +18,7 @@ const Signup = () => {
     } catch (error) {
       alert(error);
     }
-  });
+  }
 
   return (
     <div className="container" id="signup">
