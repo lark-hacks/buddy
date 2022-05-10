@@ -1,8 +1,7 @@
 
 import './App.css';
 import {  BrowserRouter as Router,  Routes,  Route} from "react-router-dom";
-import React, {useState} from "react";
-import Home from './Home.js';
+import React from "react";
 import Signup from './components/Auth/Signup.js';
 import Login from './components/Auth/Login.js';
 import PrivateRoute from './components/Auth/PrivateRoute.js';

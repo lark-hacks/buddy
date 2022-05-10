@@ -1,7 +1,6 @@
 // video tutorial: https://www.youtube.com/watch?v=unr4s3jd9qA
    
 import React, { useContext } from "react";
-import { Route, Navigate,Outlet } from "react-router";
 import { AuthContext } from "./Auth.js";
 import Home from "../../Home.js"
 import Login from "./Login.js";

@@ -1,23 +1,3 @@
-// import React, { setState } from 'react';
-// import './suggestions.css';
-// import weatherSearch from './weather-api.js';
-// import Weather from './weather.js';
-
-// export default function Suggestions() {
-//   const [weather, setWeather] = setState(null);
-
-//   let search = weatherSearch().then((weather) => {setWeather(weather.weather[0].temp); });
-
-//   return (
-//     <div id="suggestions">
-//       <div className="weatherBox">
-        
-//         <Weather weather={search}/>
-//       </div>
-//     </div>
-//   )
-// }
-
 import React, {useState} from 'react'
 import axios from 'axios'
 import {randomInt} from 'mathjs'
@@ -65,10 +45,6 @@ export default function Suggestions() {
       })
       setLocation('')
     }
-  }
-
-  const passRec = () => {
-    this.props.recallRec(rec);
   }
   
 

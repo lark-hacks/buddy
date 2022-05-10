@@ -9,9 +9,7 @@ import Suggestions from './components/suggestions/Suggestions.js';
 import SlidingMenu from './components/menu/SlidingMenu.js';
 
 function Home() {
-  const [value, setValue] = useState("cat");
   const [isOpen,setOpen] = useState(true);
-  const [name, setName] = useState('');
 
   return (
     <div className="main">
